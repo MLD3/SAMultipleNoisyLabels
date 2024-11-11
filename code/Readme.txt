@@ -6,7 +6,8 @@ To preprocess the synthetic data:
 To preprocess the mimic data:
     Get access to MIMIC-III and download it (https://physionet.org/content/mimiciii/1.4/)
     Run preprocess_mimic.py
-    Run FIDDLE on the files generated from the 'get_feats' function 
+    Run FIDDLE on the files generated from the 'get_feats' function, see command below:
+        python run.py --data_fname feats_for_fiddle.csv --population_fname ids_for_fiddle.csv --output_dir [directory for FIDDLE output] --T 7 --dt 1
     FIDDLE is open source and can be found here (https://github.com/MLD3/FIDDLE)
     
 To get the statistics in Table 1:

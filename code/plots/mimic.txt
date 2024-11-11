@@ -1,0 +1,89 @@
+approaches:  ['baseline_plain_avgnaive', 'baseline_plain_avgvote', 'baseline_separate', 'proposed3_obs', 'proposed3_err']
+mimic
+using ground truth from /data9/dotjandr/mimic_sepsis/labels_composite_cmscdc.csv
+2328
+labels (19866, 11)
+641
+time varying, time invarying (19866, 7, 44) (19866, 37)
+features (19866, 345)
+horizon: 24 prop gt cen 0.9723648444578677
+sepsis1 time stats cms
+observed sepsis rate 0.024463908184838457 486.0
+true positive rate 0.7996357012750456 439
+false positive rate 0.0024330900243309003 47
+true negative rate 0.9975669099756691 19270
+false negative rate 0.20036429872495445 110
+censored 0.0 0
+noise error 0, 25, 50, 75, 100 percentiles [-11.   0.   0.   0.   9.]
+sepsis3 time stats cdc
+observed sepsis rate 0.006141145676029414 122.0
+true positive rate 0.2222222222222222 122
+false positive rate 0.0 0
+true negative rate 1.0 19317
+false negative rate 0.7777777777777778 427
+censored 0.0 0
+noise error 0, 25, 50, 75, 100 percentiles [0. 0. 0. 0. 0.]
+sep1_extra stats
+observed sepsis rate 0.00674519279170438 134.0
+true positive rate 0.13114754098360656 72
+false positive rate 0.003209608117202464 62
+true negative rate 0.9967903918827975 19255
+false negative rate 0.8688524590163934 477
+censored 0.0 0
+noise error 0, 25, 50, 75, 100 percentiles [-13.   0.   0.   0.  10.]
+sep3_extra stats
+observed sepsis rate 0.0085573341387295 170.0
+true positive rate 0.1785063752276867 98
+false positive rate 0.003727286845783507 72
+true negative rate 0.9962727131542165 19245
+false negative rate 0.8214936247723132 451
+censored 0.0 0
+noise error 0, 25, 50, 75, 100 percentiles [-13.   0.   0.   0.  10.]
+sep_comp_extra stats
+observed sepsis rate 0.010721836303231647 213.0
+true positive rate 0.1930783242258652 106
+false positive rate 0.005539162395817156 107
+true negative rate 0.9944608376041828 19210
+false negative rate 0.8069216757741348 443
+censored 0.0 0
+noise error 0, 25, 50, 75, 100 percentiles [-13.   0.   0.   0.  10.]
+sepsis gt rate 0.02763515554213225 549
+sepsis gt censored 0.9723648444578677
+sepsis gt tte distr [ 0.  3.  6. 12. 23.]
+(500,)
+dataset split sizes: (17366,) (2000,) (500,)
+
+predicted median tte minus gt tte
+baseline_plain_avgnaive
+[[17.5  16.25 18.  ]]
+baseline_plain_avgvote
+[[17.5  16.25 18.  ]]
+baseline_separate
+[[18.5  17.25 19.  ]]
+proposed3_obs
+[[17.5  16.25 18.  ]]
+proposed3_err
+[[14.5  13.25 15.75]]
+c index
+baseline_plain_avgnaive
+[[0.47595704 0.45111683 0.52499543]]
+baseline_plain_avgvote
+[[0.45195704 0.41993845 0.48270739]]
+baseline_separate
+[[0.47693172 0.46395193 0.49580223]]
+proposed3_obs
+[[0.5090657  0.48349289 0.56477142]]
+proposed3_err
+[[0.58940569 0.53733976 0.61557607]]
+ddc
+baseline_plain_avgnaive
+[[1.14295777 1.07852102 1.28719372]]
+baseline_plain_avgvote
+[[1.12595637 1.0814789  1.23486428]]
+baseline_separate
+[[0.90976412 0.84609263 1.12411391]]
+proposed3_obs
+[[1.42166861 1.09956313 1.7804884 ]]
+proposed3_err
+[[0.86916987 0.81700429 1.23262061]]
+

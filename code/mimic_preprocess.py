@@ -995,8 +995,8 @@ def find_composite_sepsis_onset(original=True):
     sep1 = pd.read_csv(save_to + 'labels_sep1.csv')
     sep3 = pd.read_csv(save_to + 'labels_sep3.csv')
     if not original:
-        sep1 = pd.read_csv(save_to + 'labels_sep1_cms.csv')
-        sep3 = pd.read_csv(save_to + 'labels_sep3_rhee.csv')
+        sep1 = pd.read_csv(save_to + 'labels_sep1_rhee.csv') #use rhee if cms not available
+        sep3 = pd.read_csv(save_to + 'labels_sep3_cms.csv') #use cms if available
 
     composite = sep1.merge(sep3, on=['HADM_ID'])
     hadms = composite['HADM_ID'].to_numpy()
